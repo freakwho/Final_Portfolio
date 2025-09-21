@@ -175,7 +175,7 @@ export const developerExperience = [
 export const theTruth = [
     { icon: assets.career, title: 'Truth', description: 'As you can see, I have been a security guard for a long time, but as a recent IT graduate, I wanted to change my career path to programming, or at least work in that field.' },
     { icon: assets.realize, title: 'Realize', description: ' I knew, it might be too late for me to change my career path, as I only graduated with a computer science degree at the age of 28.' },
-    { icon: assets.doubt, title: 'Doubt', description: ' At first, I was very doubtful about myself, graduating late compared to my peers, and the current situation in my country, but I knew, "Nothing will happen if we do not try."' },
+    { icon: assets.doubt, title: 'Doubt', description: ' At first, I was very doubtful about myself, graduating late compared to my peers, and the current situation in my country, but I knew, "If we do not try, nothing will happen ."' },
     { icon: assets.fight, title: 'Fight', description: ' So, here I am, still trying, learning, and striving for the best. Because I promised myself, "I do not care how long it takes to become what I want to be, even if I fail, quit, or fall, I have to get up and fight again."' },
     { icon: assets.hope, title: 'Hope', description: ' And if you are interested in offering me a chance at a better job, please let me know.' }
 ]
