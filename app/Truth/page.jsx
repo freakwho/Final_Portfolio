@@ -1,11 +1,12 @@
 "use client";
-import { assets } from '@/assets/assets'
+import { assets, infoList, toolsData, serviceData, workData, security, securityService, securityExperience, minaHead, minaBody, theTruth } from '@/assets/assets'
 import Image from 'next/image'
 import React, { use, useEffect, useRef, useState } from 'react'
 import Link from 'next/link';
 
-const Navbar = () => {
+const page = () => {
 
+    // Navbar Section
     const [isScroll, setIsScroll] = useState(false)
 
     const sideMenuRef = useRef();
@@ -29,7 +30,8 @@ const Navbar = () => {
     }, [])
 
     return (
-        <>
+        <div>
+            {/* Navbar Section */}
             <div className='fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]'>
                 <Image src={assets.header_bg_color} alt='' className='w-full' />
             </div>
@@ -39,16 +41,13 @@ const Navbar = () => {
                 </a>
 
                 <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? "" : "bg-white shadow-sm bg-opacity-50"}`}>
-                    <li><a className='font-Ovo' href="#home">Home</a></li>
-                    <li><a className='font-Ovo' href="#about">About Me</a></li>
-                    <li><a className='font-Ovo' href="#services">Services</a></li>
-                    <li><a className='font-Ovo' href="#experience">My Experience</a></li>
-                    <li><a className='font-Ovo' href="#contact">Contact Me</a></li>
-                    <li><Link href="/Truth" className='text-xl'>The <span className='text-red-500'>truth</span></Link></li>
+                    <li><Link className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo' href="/Security">Security Experience<Image src={assets.arrow_icon} alt='' className='w-3' /></Link></li>
+                    <li><Link className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo' href="/">Web Developer<Image src={assets.arrow_icon} alt='' className='w-3' /></Link></li>
+
                 </ul>
 
                 <div className='flex items-center gap-4'>
-                    <Link className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo' href="/Security">Security Experience<Image src={assets.arrow_icon} alt='' className='w-3' /></Link>
+                    <Link className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo' href="/#contact">Contact Me<Image src={assets.arrow_icon} alt='' className='w-3' /></Link>
 
                     <button className='block md:hidden ml-3' onClick={openMenu}>
                         <Image src={assets.menu_black} alt='' className='w-6' />
@@ -75,8 +74,27 @@ const Navbar = () => {
                 </ul>
 
             </nav >
-        </>
-    )
-}
 
-export default Navbar
+            {/* Truth Section */}
+            <div id='experiences' className='w-full px-[12%] scroll-mt-20'>
+                <h2 className='text-center text-5xl font-Ovo pt-30 mb-10'>The <span>Truth</span></h2>
+
+                <div className='w-full left-1/2 px-5 items-center justify-between  rounded-sm'>
+                    {theTruth.map(({ icon, title, description }, index) => (
+                        <div key={index}>
+                            <div className='grid md:grid-cols-2 gap-5 mb-15'>
+                                <Image src={icon} className='rounded-xl w-100 ml-20 max-w-100 max-h-60' alt='' />
+                                <div className='text-2xl rounded-xl px-5 mt-5'>
+                                    <p>{description}</p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+            </div>
+
+        </div>
+    );
+}
+export default page;

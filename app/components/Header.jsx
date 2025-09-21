@@ -6,9 +6,8 @@ const Header = () => {
     return (
         <div id='home' className='w-11/12 max-w-3xl text-center mx-auto h-screen mt-1 flex flex-col items-center justify-center gap-3'>
             <div>
-                <Image src={assets.profile_img} alt='' className='rounded-full w-25 px-1' />
+                <Image src={assets.profile_img} alt='' className='rounded-full w-25 px-1 pt-5' />
             </div>
-
             <h3 className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo'>
                 Hello I'm Wahyu</h3>
             <h1 className='text-3xl sm:text-8xl lg:text-[50px] font-Ovo'>

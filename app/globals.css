@@ -6,6 +6,7 @@
   --color-darkTheme: #11001f;
 }
 
+
 /* Font Setting */
 * {
   font-family: Outfit;
@@ -24,15 +25,6 @@
 #Cruel :hover {
   box-shadow: 4px 4px 0 #000;
 }
-
-
-/* .shadow-black:hover {
-  box-shadow: 4px 4px 0 #000;
-}
-
-.shadow-white:hover {
-  box-shadow: 4px 4px 0 #fff;
-} */
 
 
 /* Text Setting */
@@ -76,6 +68,8 @@
   background-color: #11001f;
 }
 
+
+/* Website Developer Section  */
 
 /* About Me Section */
 #AboutCard {
@@ -130,14 +124,9 @@
 }
 
 #xp {
-  grid-template-columns: repeat(auto-fit(800px, 0.5fr));
   align-items: center;
   justify-content: center;
 }
 
-/* Dark Mode */
-/* darkmode:'selector', */
-/* .darkMode {
-  background-color: black;
-  color: white;
-} */
+
+/* Security Guard Section  */

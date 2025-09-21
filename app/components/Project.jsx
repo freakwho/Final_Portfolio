@@ -2,13 +2,13 @@ import { assets, workData } from '@/assets/assets'
 import React from 'react'
 import Image from 'next/image'
 
-const Work = () => {
+const Project = () => {
     return (
         <div id='work' className='w-full px-[12%] py-10 scroll-mt-20'>
             <h4 className='text-center mb-2 text-lg font-Ovo'>My Portfolio</h4>
             <h2 className='text-center text-5xl font-Ovo'>My Project</h2>
 
-            <div id='WorkCard' className='grid grid-cols-4 my-10 gap-30'>
+            <div id='WorkCard' className='grid grid-cols-2 my-10 gap-30'>
                 {workData.map((project, index) => (
                     <div key={index}
                         className='aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group'
@@ -31,4 +31,4 @@ const Work = () => {
     )
 }
 
-export default Work
+export default Project

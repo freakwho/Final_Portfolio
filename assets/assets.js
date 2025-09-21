@@ -36,6 +36,24 @@ import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 import top_arrow from './TopArrow.png';
 import xampp from './xampp.png';
 import vercel from './vercel.png';
+import helpdesk_icon from './helpdesk-icon.png';
+import developer_icon from './developer-icon.png';
+import language_icon from './language-icon.png';
+import solving_icon from './solving-icon.png';
+import communication_icon from './communication-icon.png';
+import patience_icon from './patience-icon.png';
+import customer_icon from './customer-icon.png';
+import certification_icon from './certification-icon.png';
+import sayap from './public/Sayap-Mas-Utama.png';
+import eka from './public/Ekanuri.png';
+import mina from './public/Pertamina-University.png';
+import recep from './public/recep.png';
+import cctv from './public/cctv.png';
+import career from './public/career.png';
+import realize from './public/realize.png';
+import doubt from './public/doubt.png';
+import fight from './public/fight.png';
+import hope from './public/hope.png';
 
 export const assets = {
     user_image,
@@ -76,6 +94,24 @@ export const assets = {
     top_arrow,
     xampp,
     vercel,
+    helpdesk_icon,
+    developer_icon,
+    language_icon,
+    solving_icon,
+    communication_icon,
+    patience_icon,
+    customer_icon,
+    certification_icon,
+    sayap,
+    eka,
+    mina,
+    recep,
+    cctv,
+    career,
+    realize,
+    doubt,
+    fight,
+    hope,
 };
 
 export const workData = [
@@ -91,17 +127,58 @@ export const workData = [
     }
 ]
 
-export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Create a website with a design that looks good, attractive, and unique', link: 'https://en.wikipedia.org/wiki/Web_design' },
-    { icon: assets.mobile_icon, title: 'Web Development', description: 'Complete website development with good responsiveness, user friendly and easy to use', link: 'https://en.wikipedia.org/wiki/Web_development' },
-    { icon: assets.ui_icon, title: 'IT Support', description: 'Fix your computer problems, such as configuration hardware and software installation etc', link: 'https://en.wikipedia.org/wiki/Help_desk' }
-]
-
 export const infoList = [
     { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js, TypeScript, PHP' },
     { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'Bachelor of Informatics Engineering' },
     { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 3 projects' }
 ];
+
+export const security = [
+    { icon: assets.language_icon, title: 'Languages', description: 'Indonesian - Active, English - Passive' },
+    { icon: assets.certification_icon, title: 'Certification', description: 'Gada Pratama' },
+    { icon: assets.project_icon, title: 'Experience', description: 'Have worked in 3 different places' }
+];
+
+export const serviceData = [
+    { icon: assets.web_icon, title: 'Web design', description: 'Create a website with a design that looks good, attractive, and unique', link: 'https://en.wikipedia.org/wiki/Web_design' },
+    { icon: assets.developer_icon, title: 'Web Development', description: 'Complete website development with good responsiveness, user friendly and easy to use', link: 'https://en.wikipedia.org/wiki/Web_development' },
+    { icon: assets.helpdesk_icon, title: 'IT Support', description: 'Fix your computer problems, such as configuration hardware and software installation etc', link: 'https://en.wikipedia.org/wiki/Help_desk' }
+]
+
+export const securityService = [
+    { icon: assets.solving_icon, title: 'Problem-Solving', description: 'The ability to analyze situations, make quick decisions, and find effective solutions.', link: 'https://en.wikipedia.org/wiki/Problem_solving' },
+    { icon: assets.communication_icon, title: 'Communication', description: 'The ability to clearly and effectively convey information verbally and in writing. ', link: 'https://en.wikipedia.org/wiki/Communication' },
+    { icon: assets.patience_icon, title: 'Patience and Composure', description: 'The ability to remain calm and composed under pressure.', link: 'https://en.wikipedia.org/wiki/Patience' },
+    { icon: assets.customer_icon, title: 'Customer Service', description: 'Professional and approachable demeanor when interacting with the public', link: 'https://en.wikipedia.org/wiki/Customer_service' }
+]
+
+export const minaHead = [
+    { company: 'Pertamina University', vendor: 'Pertamina Training and Consulting', date: 'August 2016 - December 2020' },
+]
+
+export const minaBody = [
+    { icon: assets.mina, description: 'Organizing security in the Pertamina University environment in accordance with the main duties of SATPAM such as : Regulation, Guards, Escorts, and Patrols. Also carrying out functions as CCTV Operators and Receptionists' },
+    { icon: assets.cctv, description: 'As a CCTV Operator : Monitor CCTV in the control room, Coordinate CCTV network issues with the IT department, Back up incident data, and Create incident reports' },
+    { icon: assets.recep, description: 'As a Receptionist : Welcome guests with a smile, greeting, and courtesy, Identify guest needs and permissions in detail, Refuse guests who do not have permission, Coordinate guests with relevant parties by phone, and Coordinate packages with package owners' },
+]
+
+export const securityExperience = [
+    { icon: assets.eka, company: 'Ekanuri Shorebase', vendor: 'Sinar Prapanca', date: 'October 2021 - June 2023', description: 'Maintaining security in the Ekanuri Shorebase Kalijapat environment in accordance with the main duties of the Security Guard, such as: Enforcing regulations, Checking the requirements and travel permits of incoming vendors, such as Personal Protective Equipment (PPE), antigen tests, and vehicle checklists. Entering incoming vendor data. Patrolling the dock area, and Escorting reach stackers and cranes moving locations in Kalijapat' },
+    { icon: assets.sayap, company: 'Sayap Mas Utama', vendor: 'Delta Gada Persada', date: 'July 2023 - September 2025', description: 'Enforce regulations according to SOPs that apply to employees. Carrying out inspections of arriving guests, such as body checks, travel documents, etc. Enter vendor data that has been entered into E-Checkpoint system. Monitor incoming and outgoing two-wheeled and four-wheeled vehicles. Patrol the entire area of ​​Sayap Mas Utama 2. Guard and supervise each post ' }
+]
+
+export const developerExperience = [
+    { head: 'Bootcamp Web Development', date: 'Purwadhika August 2024 - May 2025', body1: 'Implementing Advanced CSS such as Position, Media Queries, Animation, and Gradients', body2: 'Implementing State Management and Server-Side Rendering', body3: 'Implementing REST API, CRUD Database, and ORM Database, Authentication & Authorization', body4: 'Implementing Object-Oriented Programming' },
+    { head: 'Junior Web Developer Trainig Program', date: 'BNSP Januari 2024', body1: 'Implementing programming language execution commands, Text-based, greyscale, and multimedia', body2: 'Implementing User Interfaces & Implementing Structured Programming' }
+]
+
+export const theTruth = [
+    { icon: assets.career, title: 'Truth', description: 'As you can see, I have been a security guard for a long time, but as a recent IT graduate, I wanted to change my career path to programming, or at least work in that field.' },
+    { icon: assets.realize, title: 'Realize', description: ' I knew, it might be too late for me to change my career path, as I only graduated with a computer science degree at the age of 28.' },
+    { icon: assets.doubt, title: 'Doubt', description: ' At first, I was very doubtful about myself, graduating late compared to my peers, and the current situation in my country, but I knew, "Nothing will happen if we do not try."' },
+    { icon: assets.fight, title: 'Fight', description: ' So, here I am, still trying, learning, and striving for the best. Because I promised myself, "I do not care how long it takes to become what I want to be, even if I fail, quit, or fall, I have to get up and fight again."' },
+    { icon: assets.hope, title: 'Hope', description: ' And if you are interested in offering me a chance at a better job, please let me know.' }
+]
 
 export const toolsData = [
     assets.vscode, assets.git, assets.xampp, assets.vercel,
