@@ -16,6 +16,11 @@
   font-family: 'Ovo', serif;
 }
 
+.font-Sec {
+  font-family: 'Ovo', serif;
+  color: #f3f4f6;
+}
+
 .font-Outfit {
   font-family: 'Outfit', sans-serif;
 }
@@ -130,3 +135,52 @@
 
 
 /* Security Guard Section  */
+
+/* Font Setting */
+.font-Sec {
+  font-family: 'Ovo', serif;
+  color: #f3f4f6;
+}
+
+/* About Me Section */
+#AboutCards {
+  border: 0.5px solid white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: transform 500ms ease, box-shadow 500ms ease;
+}
+
+#AboutCards:hover {
+  background-color: #791eb6ec;
+  transform: translateY(-0.25rem);
+  box-shadow: 4px 4px 0 white;
+}
+
+#ServicesCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+#ServicesShadows {
+  border: 1px solid white;
+  /* A border of 1px, solid, with a gray color */
+  border-radius: 0.5rem;
+  /* Equivalent to rounded-lg */
+  padding: 3rem 2rem;
+  /* The py-12 and px-8 values */
+  cursor: pointer;
+  /* Changes the cursor to a pointer on hover */
+  transition-property: background-color, transform;
+  /* Specifies what properties to transition */
+  transition-duration: 500ms;
+  /* Sets the transition duration to 500 milliseconds */
+}
+
+#ServicesShadows:hover {
+  background-color: #791eb6ec;
+  /* A light gray background on hover */
+  transform: translateY(-0.25rem);
+  /* Moves the element up by a small amount */
+  box-shadow: 4px 4px 0 white;
+}

@@ -41,9 +41,8 @@ const page = () => {
                 </a>
 
                 <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? "" : "bg-white shadow-sm bg-opacity-50"}`}>
-                    <li><Link className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo' href="/Security">Security Experience<Image src={assets.arrow_icon} alt='' className='w-3' /></Link></li>
                     <li><Link className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo' href="/">Web Developer<Image src={assets.arrow_icon} alt='' className='w-3' /></Link></li>
-
+                    <li><Link className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo' href="/Security">Security Experience<Image src={assets.arrow_icon} alt='' className='w-3' /></Link></li>
                 </ul>
 
                 <div className='flex items-center gap-4'>

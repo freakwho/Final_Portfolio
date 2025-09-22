@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <div id='home' className='w-11/12 max-w-3xl text-center mx-auto h-screen mt-1 flex flex-col items-center justify-center gap-3'>
             <div>
-                <Image src={assets.profile_img} alt='' className='rounded-full w-25 px-1 pt-5' />
+                <Image src={assets.profile_img_trans} alt='' className='rounded-full w-25 px-1 pt-5' />
             </div>
             <h3 className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo'>
                 Hello I'm Wahyu</h3>
@@ -19,7 +19,7 @@ const Header = () => {
             <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
                 <a href="#contact" className='px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2'>Contact Me <Image src={assets.right_arrow_white} alt='' className='w-4' /></a>
 
-                <a href="/CV_IT.pdf" download className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2'>
+                <a href="/CV/CV_IT.pdf" download className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2'>
                     My Resume <Image src={assets.download_icon} alt='' className='w-4' /></a>
             </div>
         </div>
