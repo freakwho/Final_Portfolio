@@ -59,7 +59,7 @@ const page = () => {
         <div className='bg-gradient-to-r from-black to-purple-800 p-2'>
             {/* NavBar Section */}
             <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-blend-exclusion bg-opacity-50 backdrop-blur-lg shadow-sm" : ""}`}>
-                <a href="#home" className='font-Sec text-5xl w-28 cursor-pointer mr-14'>
+                <a href="#homes" className='font-Sec text-5xl w-28 cursor-pointer mr-14'>
                     Wahyu
                 </a>
 
