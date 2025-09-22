@@ -49,18 +49,18 @@ import patience_icon_dark from './Icon/patience-icon-dark.png';
 import customer_icon from './Icon/customer-icon.png';
 import certification_icon from './Icon/certification-icon.png';
 import certification_icon_dark from './Icon/certification-icon-dark.png';
-import sayap from './Public/Sayap-Mas-Utama.png';
-import eka from './Public/Ekanuri.png';
-import mina from './Public/Pertamina-University.png';
-import recep from './Public/recep.png';
-import cctv from './Public/cctv.png';
-import career from './Public/career.png';
-import realize from './Public/realize.png';
-import doubt from './Public/doubt.png';
-import fight from './Public/fight.png';
-import hope from './Public/hope.png';
-import chance from './Public/chance.png';
-import career_level from './Public/career-level.png';
+import sayap from './public/Sayap-Mas-Utama.png';
+import eka from './public/Ekanuri.png';
+import mina from './public/Pertamina-University.png';
+import recep from './public/recep.png';
+import cctv from './public/cctv.png';
+import career from './public/career.png';
+import realize from './public/realize.png';
+import doubt from './public/doubt.png';
+import fight from './public/fight.png';
+import hope from './public/hope.png';
+import chance from './public/chance.png';
+import career_level from './public/career-level.png';
 
 export const assets = {
     user_image,
