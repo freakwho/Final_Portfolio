@@ -61,14 +61,9 @@ const page = () => {
                         <Image src={assets.close_black} alt='' className='w-5 cusor-pointer' />
                     </div>
 
-                    <li><a className='font-Ovo' onClick={closeMenu} href="#home">Home</a></li>
-                    <li><a className='font-Ovo' onClick={closeMenu} href="#about">About Me</a></li>
-                    <li><a className='font-Ovo' onClick={closeMenu} href="#services">Services</a></li>
-                    <li><a className='font-Ovo' onClick={closeMenu} href="#work">My Project</a></li>
-                    <li><a className='font-Ovo' onClick={closeMenu} href="#experience">Experience</a></li>
-                    <li><a className='font-Ovo' onClick={closeMenu} href="#contact">Contact Me</a></li>
-                    <li><Link href="/Truth" className='text-xl'>The <span className='text-red-500'>truth</span></Link></li>
                     <li><Link className='font-Ovo' href="/Security">Security Experience</Link></li>
+                    <li><Link className='font-Ovo' href="/">Web Developer</Link></li>
+                    <li><Link className='font-Ovo' href="/#contact">Contact Me</Link></li>
 
                 </ul>
 
@@ -81,9 +76,9 @@ const page = () => {
                 <div className='w-full left-1/2 px-5 items-center justify-between  rounded-sm'>
                     {theTruth.map(({ icon, title, description }, index) => (
                         <div key={index}>
-                            <div className='grid md:grid-cols-2 gap-5 mb-15'>
-                                <Image src={icon} className='rounded-xl w-100 ml-20 max-w-100 max-h-60' alt='' />
-                                <div className='text-2xl rounded-xl px-5 mt-5'>
+                            <div className='grid md:grid-cols-2 gap-2 mb-15'>
+                                <Image src={icon} className='rounded-xl w-100 max-w-100 max-h-60' alt='' />
+                                <div className='text-2xl rounded-xl px-5 mt-5 max-w-2xl'>
                                     <p>{description}</p>
                                 </div>
                             </div>

@@ -133,7 +133,7 @@ const page = () => {
                     </div>
                     <div className='flex-1'>
                         <p className='mb-15 max-w-2xl font-Sec'>
-                            I've been a security guard for so long, I can't believe it's almost seven years. Hardworking, disciplined, responsible, and willing to learn new things—that's what they say about me.</p>
+                            I've been a security guard for so long, I can't believe it's almost eight years. Hardworking, disciplined, responsible, and willing to learn new things—that's what they say about me.</p>
 
                         <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
                             {security.map(({ icon, title, description }, index) => (
@@ -185,10 +185,10 @@ const page = () => {
                     ))}
 
                     {minaBody.map(({ icon, description }, index) => (
-                        <div key={index} className='grid md:grid-cols-2 gap-5 mb-10'>
-                            <Image src={icon} className='rounded-xl w-100 ml-20' alt='' />
+                        <div key={index} className='grid md:grid-cols-2 gap-2 mb-10'>
+                            <Image src={icon} className='rounded-xl w-100' alt='' />
                             <div className='text-xl rounded-xl px-5'>
-                                <p className='mt-12'>{description}</p>
+                                <p className='mt-12 max-w-2xl'>{description}</p>
                             </div>
                         </div>
                     ))}
@@ -202,9 +202,9 @@ const page = () => {
                                 <span className='text-xl'>{vendor}</span>
                                 <p className='text-sm mb-10'>{date}</p>
                             </div>
-                            <div className='grid md:grid-cols-2 gap-5 mb-5'>
-                                <Image src={icon} className='rounded-xl w-100 ml-20' alt='' />
-                                <div className='text-xl rounded-xl px-5'>
+                            <div className='grid md:grid-cols-2 gap-2 mb-5'>
+                                <Image src={icon} className='rounded-xl w-100' alt='' />
+                                <div className='text-xl rounded-xl px-5 max-w-2xl'>
                                     <p>{description}</p>
                                 </div>
                             </div>
