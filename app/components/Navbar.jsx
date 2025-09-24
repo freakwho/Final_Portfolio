@@ -48,7 +48,7 @@ const Navbar = () => {
                 </ul>
 
                 <div className='flex items-center gap-4'>
-                    <Link className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo' href="/Security">Security Experience<Image src={assets.arrow_icon} alt='' className='w-3' /></Link>
+                    <Link className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo' href="/Security">Security Guard<Image src={assets.arrow_icon} alt='' className='w-3' /></Link>
 
                     <button className='block md:hidden ml-3' onClick={openMenu}>
                         <Image src={assets.menu_black} alt='' className='w-6' />
@@ -70,7 +70,7 @@ const Navbar = () => {
                     <li><a className='font-Ovo' onClick={closeMenu} href="#experience">Experience</a></li>
                     <li><a className='font-Ovo' onClick={closeMenu} href="#contact">Contact Me</a></li>
                     <li><Link href="/Truth" className='text-xl'>The <span className='text-red-500'>truth</span></Link></li>
-                    <li><Link className='font-Ovo' href="/Security">Security Experience</Link></li>
+                    <li><Link className='font-Ovo' href="/Security">Security Guard</Link></li>
 
                 </ul>
 

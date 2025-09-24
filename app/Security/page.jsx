@@ -113,12 +113,15 @@ const page = () => {
                 <p className='max-w-2xl mx-auto font-Sec'>
                     A security guard with about 8 years of experience, able to work under pressure, and have the ability to learn new things, and I would be happy if you invite me to join your company.
                 </p>
+                <p className='text-2xl sm:text-2xl lg:text-[40px] font-Sec'>
+                    My Resume
+                </p>
 
                 <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
-                    <a href="#contacts" className='px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2'>Contact Me <Image src={assets.right_arrow_white} alt='' className='w-4' /></a>
+                    <a href="/CV/CV_SATPAM_English.pdf" download className='font-Sec px-10 py-3 border rounded-full border-white flex items-center gap-2'>English <Image src={assets.download_icon_dark} alt='' className='w-4' /></a>
 
-                    <a href="CV/CV_SATPAM.pdf" download className='font-Sec px-10 py-3 border rounded-full border-white flex items-center gap-2'>
-                        My Resume <Image src={assets.download_icon_dark} alt='' className='w-4' /></a>
+                    <a href="/CV/CV_SATPAM.pdf" download className='font-Sec px-10 py-3 border rounded-full border-white flex items-center gap-2'>
+                        Indonesian <Image src={assets.download_icon_dark} alt='' className='w-4' /></a>
                 </div>
             </div>
 
