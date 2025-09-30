@@ -1,5 +1,5 @@
 "use client";
-import { assets, infoList, toolsData, serviceData, workData, security, securityService, securityExperience, minaHead, minaBody } from '@/assets/assets'
+import { assets, security, securityService, securityExperience, minaHead, minaBody } from '@/assets/assets'
 import Image from 'next/image'
 import React, { use, useEffect, useRef, useState } from 'react'
 import Link from 'next/link';
@@ -29,34 +29,9 @@ const page = () => {
         })
     }, [])
 
-    // Contact Section
-    const [result, setResult] = useState("");
-
-    const onSubmit = async (event) => {
-        event.preventDefault();
-        setResult("Sending....");
-        const formData = new FormData(event.target);
-
-        formData.append("access_key", "7ad81f79-c519-4155-b84f-8e559a464467");
-
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
-        });
-
-        const data = await response.json();
-
-        if (data.success) {
-            setResult("Form Submitted Successfully");
-            event.target.reset();
-        } else {
-            console.log("Error", data);
-            setResult(data.message);
-        }
-    };
 
     return (
-        <div className='bg-gradient-to-r from-black to-purple-800 p-2'>
+        <div className='bg-gradient-to-r from-black to-purple-800'>
             {/* NavBar Section */}
             <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-blend-exclusion bg-opacity-50 backdrop-blur-lg shadow-sm" : ""}`}>
                 <a href="#homes" className='font-Sec text-5xl w-28 cursor-pointer mr-14'>
@@ -68,13 +43,12 @@ const page = () => {
                     <li><a className='font-Sec' href="#abouts">About Me</a></li>
                     <li><a className='font-Sec' href="#servicess">Services</a></li>
                     <li><a className='font-Sec' href="#experiences">My Experience</a></li>
-                    <li><a className='font-Sec' href="#contacts">Contact Me</a></li>
-                    <li><Link href="/Truth" className='font-Sec text-xl'>The <span className='text-red-500'>truth</span></Link></li>
+                    <li><Link className='font-Sec' href="/#contact">Contact Me</Link></li>
                 </ul>
 
                 <div className='flex items-center gap-4'>
 
-                    <Link className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-white rounded-full ml-4 font-Sec' href="/">Web Developer<Image src={assets.arrow_icon_dark} alt='' className='w-3' /></Link>
+                    <Link className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-white rounded-full ml-4 font-Sec bg-black' href="/">Back</Link>
 
                     <button className='block md:hidden ml-3' onClick={openMenu}>
                         <Image src={assets.menu_black} alt='' className='w-6' />
@@ -93,15 +67,14 @@ const page = () => {
                     <li><a className='font-Sec' onClick={closeMenu} href="#abouts">About Me</a></li>
                     <li><a className='font-Sec' onClick={closeMenu} href="#servicess">Services</a></li>
                     <li><a className='font-Sec' onClick={closeMenu} href="#experiences">Experience</a></li>
-                    <li><a className='font-Sec' onClick={closeMenu} href="#contacts">Contact Me</a></li>
-                    <li><Link href="/Truth" className='font-Sec text-xl'>The <span className='text-red-500'>truth</span></Link></li>
-                    <li><Link className='font-Sec' href="/">Web Developer</Link></li>
+                    <li><Link className='font-Sec' onClick={closeMenu} href="/#contact">Contact Me</Link></li>
+                    <li><Link className='font-Sec' href="/">Back</Link></li>
 
                 </ul>
 
             </nav >
 
-            {/* Header Section */}
+            {/* Home Section */}
             <div id='homes' className='w-11/12 max-w-3xl text-center mx-auto h-screen mt-1 flex flex-col items-center justify-center gap-3'>
                 <div>
                     <Image src={assets.profile_img_trans} alt='' className='rounded-full w-25 px-1' />
@@ -109,9 +82,9 @@ const page = () => {
                 <h3 className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-Sec'>
                     Hello I'm Wahyu</h3>
                 <h1 className='text-3xl sm:text-8xl lg:text-[50px] font-Sec'>
-                    Security Guard based in Indonesia.</h1>
+                    Security Guard</h1>
                 <p className='max-w-2xl mx-auto font-Sec'>
-                    A security guard with about 8 years of experience, able to work under pressure, and have the ability to learn new things, and I would be happy if you invite me to join your company.
+                    A security guard from Jakarta, Indonesia with about 8 years of experience, and I would be happy if you invite me to join your company.
                 </p>
                 <p className='text-2xl sm:text-2xl lg:text-[40px] font-Sec'>
                     My Resume
@@ -136,7 +109,7 @@ const page = () => {
                     </div>
                     <div className='flex-1'>
                         <p className='mb-15 max-w-2xl font-Sec'>
-                            I've been a security guard for so long, I can't believe it's almost eight years. Hardworking, disciplined, responsible, and willing to learn new things—that's what they say about me.</p>
+                            I've been a security guard for almost eight years. Able to work under pressure, and have the ability to learn new things. Hardworking, disciplined, and responsible —that's what they say about me.</p>
 
                         <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
                             {security.map(({ icon, title, description }, index) => (
@@ -214,33 +187,6 @@ const page = () => {
                         </div>
                     ))}
                 </div>
-
-            </div>
-
-            {/* Contact Section */}
-            <div id='contacts' className='w-full px-[12%] py-10 scroll-mt-20 bg-no-repeat bg-center bg-[lenght:90%_auto]'>
-                <h4 className='text-center mb-2 text-lg font-Sec'>Connect With Me</h4>
-                <h2 className='text-center text-5xl font-Sec'>Get In Touch</h2>
-
-                <p className='text-center text-xl max-w-2xl mx-auto mt-5 mb-12 font-Sec'>I'd love to hear from you if you have any question, comments, or feedback, please fill out the form below</p>
-
-                <form onSubmit={onSubmit} className='max-w-2xl mx-auto'>
-                    <div className='grid grid-cols-auto gap-6 mt-10 mb-8 '>
-                        <input type="text" placeholder='Enter your name' required
-                            className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-purple-300' name='name' />
-                        <input type="email" placeholder='Enter your email' required
-                            className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-purple-300' name='email' />
-                    </div>
-                    <textarea rows='6' placeholder='Enter your message' required
-                        className='w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-purple-300 mb-6' name='message'>
-                    </textarea>
-
-                    <button type='submit' className='py-3 px-8 w-max flex items-center justify-between gap-2 bg-purple-300 text-white rounded-full mx-auto hover:bg-black duration-500'>
-                        Submit now <Image src={assets.right_arrow_bold_dark} alt='' className='w-4' />
-                    </button>
-
-                    <p className='mt-4'>{result}</p>
-                </form>
 
             </div>
 

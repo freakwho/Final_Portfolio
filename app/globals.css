@@ -86,7 +86,7 @@
 }
 
 #AboutCard:hover {
-  background-color: #f3f4f6;
+  background-color: white;
   transform: translateY(-0.25rem);
   box-shadow: 4px 4px 0 #000;
 }
@@ -113,7 +113,7 @@
 }
 
 #ServicesShadow:hover {
-  background-color: #f3f4f6;
+  background-color: white;
   /* A light gray background on hover */
   transform: translateY(-0.25rem);
   /* Moves the element up by a small amount */

@@ -137,7 +137,7 @@ export const workData = [
     {
         title: 'Portfolio',
         bgImage: '/work-4.png',
-        link: 'https://final-portfolio-eight-self.vercel.app/',
+        link: 'https://final-portfolio-iota-seven.vercel.app/',
     }
 ]
 
