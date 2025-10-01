@@ -33,7 +33,7 @@ const page = () => {
 
             {/* NavBar Section */}
             <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-blend-exclusion bg-opacity-50 backdrop-blur-lg shadow-sm" : ""}`}>
-                <a href="#homes" className='font-Ovo text-5xl w-28 cursor-pointer mr-14'>
+                <a href="#home" className='font-Ovo text-5xl w-28 cursor-pointer mr-14'>
                     Wahyu
                 </a>
 

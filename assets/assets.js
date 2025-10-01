@@ -61,6 +61,7 @@ import fight from './public/fight.png';
 import hope from './public/hope.png';
 import chance from './public/chance.png';
 import career_level from './public/career-level.png';
+import introduce from './public/introduce.png';
 
 export const assets = {
     user_image,
@@ -126,6 +127,7 @@ export const assets = {
     hope,
     chance,
     career_level,
+    introduce,
 };
 
 export const workData = [

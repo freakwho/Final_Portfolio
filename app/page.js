@@ -1,8 +1,9 @@
 "use client";
-import { assets, infoList, toolsData, serviceData, workData, security, securityService, securityExperience, minaHead, minaBody, theTruth } from '@/assets/assets'
+import { assets, theTruth } from '@/assets/assets'
 import Image from 'next/image'
 import React, { use, useEffect, useRef, useState } from 'react'
 import Link from 'next/link';
+
 
 export default function Home() {
 
@@ -65,7 +66,7 @@ export default function Home() {
           <Image src={assets.header_bg_color} alt='' className='w-full' />
         </div>
         <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-blend-exclusion bg-opacity-50 backdrop-blur-lg shadow-sm" : ""}`}>
-          <a href="#homes" className='text-5xl w-28 cursor-pointer mr-14'>
+          <a href="#home" className='text-5xl w-28 cursor-pointer mr-14'>
             Wahyu
           </a>
 
@@ -100,6 +101,17 @@ export default function Home() {
         {/* Truth Section */}
         <div id='experiences' className='w-full px-[12%] scroll-mt-20'>
           <h2 className='text-center text-5xl font-Ovo pt-30 mb-10'>The <span>Truth</span></h2>
+
+          <div className='w-full left-1/2 px-5 items-center justify-between  rounded-sm'>
+            <div>
+              <div className='grid md:grid-cols-2 gap-2 mb-15'>
+                <Image src={assets.introduce} className='rounded-xl w-100 max-w-100 max-h-60' alt='' />
+                <div className='text-2xl rounded-xl px-5 mt-5 max-w-2xl'>
+                  <p>Let me introduce myself, my name is Wahyu, this is my portfolio, I have worked as a <Link className='text-fuchsia-800 text-decoration-line: underline; text-2xl font-semibold' href="/Security">Security</Link> guard for quite a long time, but on the other hand I am a <Link className='text-cyan-400 text-decoration-line: underline; text-2xl font-semibold' href="/Security">Fresh Graduate</Link> of informatics engineering.</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div className='w-full left-1/2 px-5 items-center justify-between  rounded-sm'>
             {theTruth.map(({ icon, title, description }, index) => (
