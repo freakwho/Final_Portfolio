@@ -160,33 +160,105 @@ const page = () => {
                         </div>
                     ))}
 
-                    {minaBody.map(({ icon, description }, index) => (
+                    {/* {minaBody.map(({ icon, description }, index) => (
                         <div key={index} className='grid md:grid-cols-2 gap-2 mb-10'>
                             <Image src={icon} className='rounded-xl w-100' alt='' />
                             <div className='text-xl rounded-xl px-5'>
                                 <p className='mt-12 max-w-2xl'>{description}</p>
                             </div>
                         </div>
-                    ))}
+                    ))} */}
+                    <div className='grid md:grid-cols-2 gap-2 mb-10'>
+                        <Image src={assets.mina} className='rounded-xl w-100' alt='' />
+                        <div className='text-xl rounded-xl'>
+                            <p className='text-3xl font-semibold'>Carrying out the main duties of SATPAM :</p>
+                            <ul className='text-lg font-semibold mt-8 max-w-lg mb-5 justify-between'>
+                                <li>Enforcing regulations</li>
+                                <li>Guarding company assets</li>
+                                <li>Escorting management as they enter and exit</li>
+                                <li>Patrolling campus areas every two hours</li>
+                            </ul>
+                            <p className='text-lg'>Also carrying out functions as CCTV Operators and Receptionists</p>
+                        </div>
+                    </div>
+
+                    <div className='grid md:grid-cols-2 gap-2 mb-10'>
+                        <Image src={assets.cctv} className='rounded-xl w-100' alt='' />
+                        <div className='text-xl rounded-xl'>
+                            <p className='text-3xl font-semibold'>As a CCTV Operator</p>
+                            <ul className='text-lg font-semibold mt-8 max-w-lg mb-5 justify-between'>
+                                <li>Monitor CCTV in the control room</li>
+                                <li>Coordinate CCTV problems with the IT department</li>
+                                <li>Back up incident data</li>
+                                <li>Create incident reports</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div className='grid md:grid-cols-2 gap-2 mb-10'>
+                        <Image src={assets.recep} className='rounded-xl w-100' alt='' />
+                        <div className='text-xl rounded-xl'>
+                            <p className='text-3xl font-semibold'>As a Receptionist</p>
+                            <ul className='text-lg font-semibold mt-8 max-w-lg mb-5 justify-between'>
+                                <li>Welcome guests with a smile</li>
+                                <li>Greeting, and courtesy</li>
+                                <li>Identify guest needs and permissions in detail</li>
+                                <li>Coordinate guests with relevant parties by phone</li>
+                                <li>Coordinate packages with package owners</li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div className='w-full left-1/2 px-5 items-center justify-between  rounded-sm font-Sec'>
-                    {securityExperience.map(({ icon, company, vendor, date, description }, index) => (
-                        <div key={index}>
-                            <div className='items-center text-center mb-10 mt-10'>
-                                <h1 className='text-3xl text-shadow-black font-semibold'>{company}</h1>
-                                <span className='text-xl'>{vendor}</span>
-                                <p className='text-sm mb-10'>{date}</p>
-                            </div>
-                            <div className='grid md:grid-cols-2 gap-2 mb-5'>
-                                <Image src={icon} className='rounded-xl w-100' alt='' />
-                                <div className='text-xl rounded-xl px-5 max-w-2xl'>
-                                    <p>{description}</p>
-                                </div>
+                <div className='w-full bottom-5 left-1/2 px-5 items-center justify-between  rounded-xl mb-5 font-Sec'>
+
+                    <div>
+                        <div className='items-center text-center mb-10 mt-20'>
+                            <h1 className='text-3xl text-shadow-black font-semibold'>Ekanuri Shorebase</h1>
+                            <span className='text-xl'>Sinar Prapanca</span>
+                            <p className='text-sm mb-10'>October 2021 - June 2023</p>
+                        </div>
+                        <div className='grid md:grid-cols-2 gap-2 mb-5'>
+                            <Image src={assets.eka} className='rounded-xl w-100' alt='' />
+                            <div className='text-xl rounded-xl'>
+                                <p className='text-3xl font-semibold'>Carrying out the main duties of SATPAM :</p>
+                                <ul className='text-lg font-semibold mt-5 max-w-lg mb-5 justify-between'>
+                                    <li>Enforcing regulations</li>
+                                    <li>Checking the requirements of incoming vendors</li>
+                                    <li>Such as: Delivery Note, Antigent Tests, Vehicle checklist, and Personal Protective Equipment</li>
+                                    <li>Entering incoming vendor data</li>
+                                    <li>Patrolling the dock area</li>
+                                    <li>Escorting reach stackers and cranes</li>
+                                </ul>
                             </div>
                         </div>
-                    ))}
+                    </div>
+
+                    <div>
+                        <div className='items-center text-center mb-10 mt-20'>
+                            <h1 className='text-3xl text-shadow-black font-semibold'>Sayap Mas Utama 2</h1>
+                            <span className='text-xl'>Delta Gada Persada</span>
+                            <p className='text-sm mb-10'>July 2023 - September 2025</p>
+                        </div>
+                        <div className='grid md:grid-cols-2 gap-2 mb-5'>
+                            <Image src={assets.sayap} className='rounded-xl w-100' alt='' />
+                            <div className='text-xl rounded-xl'>
+                                <p className='text-3xl font-semibold'>Carrying out the main duties of SATPAM :</p>
+                                <ul className='text-lg font-semibold mt-5 max-w-lg mb-5 justify-between'>
+                                    <li>Enforcing regulations</li>
+                                    <li>Checking the requirements of incoming vendors</li>
+                                    <li>Such as: Delivery Note, Vehicle checklist, and Personal Protective Equipment</li>
+                                    <li>Enter vendor data into the E-Checkpoint system</li>
+                                    <li>Patrol the entire area of Sayap Mas Utama 2</li>
+                                    <li>Monitor incoming and outgoing two-wheeled and four-wheeled vehicles (Secure Parking)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+
 
             </div>
 
@@ -213,6 +285,7 @@ const page = () => {
                     </ul>
                 </div>
             </div>
+
         </div>
     );
 }

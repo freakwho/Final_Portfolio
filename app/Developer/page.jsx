@@ -83,7 +83,7 @@ const page = () => {
                 <h3 className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo'>
                     Hello I'm Wahyu</h3>
                 <h1 className='text-3xl sm:text-8xl lg:text-[50px] font-Ovo'>
-                    Junior Web Developer.</h1>
+                    Junior Web Developer</h1>
                 <p className='max-w-2xl mx-auto font-Ovo'>
                     I am a junior web developer from Jakarta, Indonesia with a strong desire to learn, and I would be delighted if you would invite me to join your company.
                 </p>
