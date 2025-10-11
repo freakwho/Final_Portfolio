@@ -1,8 +1,9 @@
 "use client";
-import { assets, security, securityService, securityExperience, minaHead, minaBody } from '@/assets/assets'
+import { assets, security, securityService, minaHead, minaExp, securityExperienceEka, securityExperienceSayap } from '@/assets/assets'
 import Image from 'next/image'
 import React, { use, useEffect, useRef, useState } from 'react'
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const page = () => {
 
@@ -11,12 +12,22 @@ const page = () => {
 
     const sideMenuRef = useRef();
 
+    const dropMenuRef = useRef();
+
     const openMenu = () => {
         sideMenuRef.current.style.transform = 'translateX(-16rem)'
     }
 
     const closeMenu = () => {
         sideMenuRef.current.style.transform = 'translateX(16rem)'
+    }
+
+    const openMen = () => {
+        dropMenuRef.current.style.transform = 'translateY(-16rem)'
+    }
+
+    const closeMen = () => {
+        dropMenuRef.current.style.transform = 'translateY(16rem)'
     }
 
     useEffect(() => {
@@ -42,7 +53,11 @@ const page = () => {
                     <li><a className='font-Sec' href="#homes">Home</a></li>
                     <li><a className='font-Sec' href="#abouts">About Me</a></li>
                     <li><a className='font-Sec' href="#servicess">Services</a></li>
-                    <li><a className='font-Sec' href="#experiences">My Experience</a></li>
+                    <div>
+                        <FlyoutLink href='#' FlyoutContent={PricingContent}>
+                            <li><p className='font-Sec'>My Experience</p></li>
+                        </FlyoutLink>
+                    </div>
                     <li><Link className='font-Sec' href="/#contact">Contact Me</Link></li>
                 </ul>
 
@@ -66,11 +81,29 @@ const page = () => {
                     <li><a className='font-Sec' onClick={closeMenu} href="#homes">Home</a></li>
                     <li><a className='font-Sec' onClick={closeMenu} href="#abouts">About Me</a></li>
                     <li><a className='font-Sec' onClick={closeMenu} href="#servicess">Services</a></li>
-                    <li><a className='font-Sec' onClick={closeMenu} href="#experiences">Experience</a></li>
+                    <div>
+                        <FlyoutLink href='#' FlyoutContent={PricingContent}>
+                            <li><p className='font-Sec'>My Experience</p></li>
+                        </FlyoutLink>
+                    </div>
                     <li><Link className='font-Sec' onClick={closeMenu} href="/#contact">Contact Me</Link></li>
                     <li><Link className='font-Sec' href="/">Back</Link></li>
 
                 </ul>
+
+                {/* Experience Dropdown Menu */}
+
+                {/* <ul ref={dropMenuRef} className='flex flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-purple-900 transition duration-500'>
+
+                    <div className='absolute right-6 top-6' onClick={closeMen}>
+                        <Image src={assets.close_black} alt='' className='w-5 cusor-pointer' />
+                    </div>
+
+                    <li><a className='font-Sec' onClick={closeMen} href="#pertamina">Pertamina</a></li>
+                    <li><a className='font-Sec' onClick={closeMen} href="#ekanuri">Ekanuri</a></li>
+                    <li><a className='font-Sec' onClick={closeMen} href="#sayap">Sayap Mas Utama</a></li>
+
+                </ul> */}
 
             </nav >
 
@@ -148,117 +181,104 @@ const page = () => {
             </div>
 
             {/* Experience Section */}
-            <div id='experiences' className='w-full px-[12%] scroll-mt-20'>
-                <h2 className='text-center text-5xl font-Sec py-5 mb-5'>Experience</h2>
+            <div className='w-full px-[12%] scroll-mt-20'>
+                <h2 className='text-center text-5xl font-Sec py-5 mb-5' id='pertamina'>Experience</h2>
 
                 <div className='w-full bottom-5 left-1/2 px-5 items-center justify-between  rounded-xl mb-5 font-Sec'>
-                    {minaHead.map(({ company, vendor, date }, index) => (
-                        <div key={index} className='items-center text-center mb-10'>
-                            <h1 className='text-3xl font-semibold'>{company}</h1>
-                            <span className='text-xl'>{vendor}</span>
-                            <p className='text-sm mb-8'>{date}</p>
+
+                    {minaHead.map(({ company, vendor, date, icon, title, list1, list2, list3, list4, next }, index) => (
+                        <div key={index}>
+                            <div className='items-center text-center mb-10'>
+                                <h1 className='text-3xl font-semibold'>{company}</h1>
+                                <span className='text-xl'>{vendor}</span>
+                                <p className='text-sm mb-8'>{date}</p>
+                            </div>
+
+                            <div className='grid md:grid-cols-2 gap-2 mb-10'>
+                                <Image src={icon} className='rounded-xl w-100' alt='' />
+                                <div className='text-xl rounded-xl'>
+                                    <p className='text-3xl font-semibold'>{title}</p>
+                                    <ul className='text-lg font-semibold mt-8 max-w-lg mb-5 justify-between'>
+                                        <li>{list1}</li>
+                                        <li>{list2}</li>
+                                        <li>{list3}</li>
+                                        <li>{list4}</li>
+                                    </ul>
+                                    <p className='text-lg'>{next}</p>
+                                </div>
+                            </div>
                         </div>
                     ))}
 
-                    {/* {minaBody.map(({ icon, description }, index) => (
+                    {minaExp.map(({ icon, title, list1, list2, list3, list4, list5 }, index) => (
                         <div key={index} className='grid md:grid-cols-2 gap-2 mb-10'>
                             <Image src={icon} className='rounded-xl w-100' alt='' />
-                            <div className='text-xl rounded-xl px-5'>
-                                <p className='mt-12 max-w-2xl'>{description}</p>
-                            </div>
-                        </div>
-                    ))} */}
-                    <div className='grid md:grid-cols-2 gap-2 mb-10'>
-                        <Image src={assets.mina} className='rounded-xl w-100' alt='' />
-                        <div className='text-xl rounded-xl'>
-                            <p className='text-3xl font-semibold'>Carrying out the main duties of SATPAM :</p>
-                            <ul className='text-lg font-semibold mt-8 max-w-lg mb-5 justify-between'>
-                                <li>Enforcing regulations</li>
-                                <li>Guarding company assets</li>
-                                <li>Escorting management as they enter and exit</li>
-                                <li>Patrolling campus areas every two hours</li>
-                            </ul>
-                            <p className='text-lg'>Also carrying out functions as CCTV Operators and Receptionists</p>
-                        </div>
-                    </div>
-
-                    <div className='grid md:grid-cols-2 gap-2 mb-10'>
-                        <Image src={assets.cctv} className='rounded-xl w-100' alt='' />
-                        <div className='text-xl rounded-xl'>
-                            <p className='text-3xl font-semibold'>As a CCTV Operator</p>
-                            <ul className='text-lg font-semibold mt-8 max-w-lg mb-5 justify-between'>
-                                <li>Monitor CCTV in the control room</li>
-                                <li>Coordinate CCTV problems with the IT department</li>
-                                <li>Back up incident data</li>
-                                <li>Create incident reports</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div className='grid md:grid-cols-2 gap-2 mb-10'>
-                        <Image src={assets.recep} className='rounded-xl w-100' alt='' />
-                        <div className='text-xl rounded-xl'>
-                            <p className='text-3xl font-semibold'>As a Receptionist</p>
-                            <ul className='text-lg font-semibold mt-8 max-w-lg mb-5 justify-between'>
-                                <li>Welcome guests with a smile</li>
-                                <li>Greeting, and courtesy</li>
-                                <li>Identify guest needs and permissions in detail</li>
-                                <li>Coordinate guests with relevant parties by phone</li>
-                                <li>Coordinate packages with package owners</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div className='w-full bottom-5 left-1/2 px-5 items-center justify-between  rounded-xl mb-5 font-Sec'>
-
-                    <div>
-                        <div className='items-center text-center mb-10 mt-20'>
-                            <h1 className='text-3xl text-shadow-black font-semibold'>Ekanuri Shorebase</h1>
-                            <span className='text-xl'>Sinar Prapanca</span>
-                            <p className='text-sm mb-10'>October 2021 - June 2023</p>
-                        </div>
-                        <div className='grid md:grid-cols-2 gap-2 mb-5'>
-                            <Image src={assets.eka} className='rounded-xl w-100' alt='' />
                             <div className='text-xl rounded-xl'>
-                                <p className='text-3xl font-semibold'>Carrying out the main duties of SATPAM :</p>
-                                <ul className='text-lg font-semibold mt-5 max-w-lg mb-5 justify-between'>
-                                    <li>Enforcing regulations</li>
-                                    <li>Checking the requirements of incoming vendors</li>
-                                    <li>Such as: Delivery Note, Antigent Tests, Vehicle checklist, and Personal Protective Equipment</li>
-                                    <li>Entering incoming vendor data</li>
-                                    <li>Patrolling the dock area</li>
-                                    <li>Escorting reach stackers and cranes</li>
+                                <p className='text-3xl font-semibold'>{title}</p>
+                                <ul className='text-lg font-semibold mt-8 max-w-lg mb-5 justify-between'>
+                                    <li>{list1}</li>
+                                    <li>{list2}</li>
+                                    <li>{list3}</li>
+                                    <li>{list4}</li>
+                                    <li>{list5}</li>
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    ))}
 
-                    <div>
-                        <div className='items-center text-center mb-10 mt-20'>
-                            <h1 className='text-3xl text-shadow-black font-semibold'>Sayap Mas Utama 2</h1>
-                            <span className='text-xl'>Delta Gada Persada</span>
-                            <p className='text-sm mb-10'>July 2023 - September 2025</p>
-                        </div>
-                        <div className='grid md:grid-cols-2 gap-2 mb-5'>
-                            <Image src={assets.sayap} className='rounded-xl w-100' alt='' />
-                            <div className='text-xl rounded-xl'>
-                                <p className='text-3xl font-semibold'>Carrying out the main duties of SATPAM :</p>
-                                <ul className='text-lg font-semibold mt-5 max-w-lg mb-5 justify-between'>
-                                    <li>Enforcing regulations</li>
-                                    <li>Checking the requirements of incoming vendors</li>
-                                    <li>Such as: Delivery Note, Vehicle checklist, and Personal Protective Equipment</li>
-                                    <li>Enter vendor data into the E-Checkpoint system</li>
-                                    <li>Patrol the entire area of Sayap Mas Utama 2</li>
-                                    <li>Monitor incoming and outgoing two-wheeled and four-wheeled vehicles (Secure Parking)</li>
-                                </ul>
+                </div >
+
+                {securityExperienceEka.map(({ icon, company, vendor, date, title, list1, list2, list3, list4, list5, list6 }, index) => (
+                    <div key={index} className='w-full bottom-5 left-1/2 px-5 items-center justify-between  rounded-xl mb-5 font-Sec' id='eka'>
+                        <div>
+                            <div className='items-center text-center mb-10 mt-20'>
+                                <h1 className='text-3xl text-shadow-black font-semibold'>{company}</h1>
+                                <span className='text-xl'>{vendor}</span>
+                                <p className='text-sm mb-10'>{date}</p>
+                            </div>
+                            <div className='grid md:grid-cols-2 gap-2 mb-5'>
+                                <Image src={icon} className='rounded-xl w-100' alt='' />
+                                <div className='text-xl rounded-xl'>
+                                    <p className='text-3xl font-semibold'>{title}</p>
+                                    <ul className='text-lg font-semibold mt-5 max-w-lg mb-5 justify-between'>
+                                        <li>{list1}</li>
+                                        <li>{list2}</li>
+                                        <li>{list3}</li>
+                                        <li>{list4}</li>
+                                        <li>{list5}</li>
+                                        <li>{list6}</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                ))}
 
-
+                {securityExperienceSayap.map(({ icon, company, vendor, date, title, list1, list2, list3, list4, list5, list6 }, index) => (
+                    <div key={index} className='w-full bottom-5 left-1/2 px-5 items-center justify-between  rounded-xl mb-5 font-Sec' id='sayap'>
+                        <div>
+                            <div className='items-center text-center mb-10 mt-20'>
+                                <h1 className='text-3xl text-shadow-black font-semibold'>{company}</h1>
+                                <span className='text-xl'>{vendor}</span>
+                                <p className='text-sm mb-10'>{date}</p>
+                            </div>
+                            <div className='grid md:grid-cols-2 gap-2 mb-5'>
+                                <Image src={icon} className='rounded-xl w-100' alt='' />
+                                <div className='text-xl rounded-xl'>
+                                    <p className='text-3xl font-semibold'>{title}</p>
+                                    <ul className='text-lg font-semibold mt-5 max-w-lg mb-5 justify-between'>
+                                        <li>{list1}</li>
+                                        <li>{list2}</li>
+                                        <li>{list3}</li>
+                                        <li>{list4}</li>
+                                        <li>{list5}</li>
+                                        <li>{list6}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ))}
 
             </div>
 
@@ -288,5 +308,60 @@ const page = () => {
 
         </div>
     );
-}
+};
+
+// Security Experience Dropdown Menu
+
+const FlyoutLink = ({ children, href, FlyoutContent }) => {
+    const [open, setOpen] = useState(false);
+
+    const showFlyout = open && FlyoutContent;
+
+    return (
+        <div
+            onMouseEnter={() => setOpen(true)}
+            onMouseLeave={() => setOpen(false)}
+            className="group relative h-fit w-fit"
+        >
+
+            <a href={href} className="relative text-white">
+                {children}
+                <span
+                    style={{
+                        transform: showFlyout ? "scaleX(1)" : "scaleX(0)",
+                    }}
+                    className="absolute -bottom-2 -left-2 -right-2 h-1 origin-left rounded-full bg-indigo-300 transition-transform duration-300 ease-out"
+                />
+            </a>
+            <AnimatePresence>
+                {showFlyout && (
+                    <motion.div
+                        initial={{ opacity: 0, y: 15 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 15 }}
+                        style={{ x: "-50%" }}
+                        transition={{ duration: 0.3, ease: 'easeOut' }}
+                        className="absolute left-1/2 top-12 bg-transparent text-black">
+                        <div className="absolute -top-6 left-0 right-0 h-6 bg-transparent" />
+                        <div className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 ratote-45 bg-transparent" />
+                        <FlyoutContent />
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </div>
+    );
+};
+
+const PricingContent = () => {
+    return (
+        <div className="w-45 bg-purple-900 p-6 shadow-xl rounded-xl">
+            <div className="mb-3 space-y-3">
+                <a className="block text-sm hover:underline font-Sec" href="#pertamina" >Pertamina University</a>
+                <a className="font-Sec block text-sm hover:underline" href="#eka" >Ekanuri Shorebase</a>
+                <a className="font-Sec block text-sm hover:underline" href="#sayap" >Sayap Mas Utama</a>
+            </div>
+        </div>
+    );
+};
+
 export default page;

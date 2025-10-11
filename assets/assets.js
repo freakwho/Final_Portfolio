@@ -169,18 +169,20 @@ export const securityService = [
 ]
 
 export const minaHead = [
-    { company: 'Pertamina University', vendor: 'Pertamina Training and Consulting', date: 'August 2016 - December 2020' },
+    { company: 'Pertamina University', vendor: 'Pertamina Training and Consulting', date: 'August 2016 - December 2020', icon: assets.mina, title: 'Carrying out the main duties of SATPAM :', list1: 'Enforcing regulations', list2: 'Guarding company assets', list3: 'Escorting management as they enter and exit', list4: 'Patrolling campus areas every two hours', next: 'Also carrying out functions as CCTV Operators and Receptionists' },
 ]
 
-export const minaBody = [
-    { icon: assets.mina, description: 'Organizing security in the Pertamina University environment in accordance with the main duties of SATPAM such as : Regulation, Guards, Escorts, and Patrols. Also carrying out functions as CCTV Operators and Receptionists' },
-    { icon: assets.cctv, description: 'As a CCTV Operator : Monitor CCTV in the control room, Coordinate CCTV network issues with the IT department, Back up incident data, and Create incident reports' },
-    { icon: assets.recep, description: 'As a Receptionist : Welcome guests with a smile, greeting, and courtesy, Identify guest needs and permissions in detail, Refuse guests who do not have permission, Coordinate guests with relevant parties by phone, and Coordinate packages with package owners' },
+export const minaExp = [
+    { icon: assets.cctv, title: 'As a CCTV Operator', list1: 'Monitor CCTV in the control room', list2: 'Equipment & System Checks', list3: 'Coordinate CCTV problems with the IT department enter and exit', list4: 'Back up incident data', list5: 'Create incident reports' },
+    { icon: assets.recep, title: 'As a Receptionist', list1: 'Welcome guests with a smile', list2: 'Greeting, and courtesy', list3: 'Identify guest needs and permissions in detail', list4: 'Coordinate guests with relevant parties by phone', list5: 'Coordinate packages with package owners' },
 ]
 
-export const securityExperience = [
-    { icon: assets.eka, company: 'Ekanuri Shorebase', vendor: 'Sinar Prapanca', date: 'October 2021 - June 2023', description: 'Maintaining security in the Ekanuri Shorebase Kalijapat environment in accordance with the main duties of the Security Guard, such as: Enforcing regulations, Checking the requirements and travel permits of incoming vendors, such as Personal Protective Equipment (PPE), antigen tests, and vehicle checklists. Entering incoming vendor data. Patrolling the dock area, and Escorting reach stackers and cranes moving locations in Kalijapat' },
-    { icon: assets.sayap, company: 'Sayap Mas Utama', vendor: 'Delta Gada Persada', date: 'July 2023 - September 2025', description: 'Enforce regulations according to SOPs that apply to employees. Carrying out inspections of arriving guests, such as body checks, travel documents, etc. Enter vendor data that has been entered into E-Checkpoint system. Monitor incoming and outgoing two-wheeled and four-wheeled vehicles. Patrol the entire area of ​​Sayap Mas Utama 2. Guard and supervise each post ' }
+export const securityExperienceEka = [
+    { icon: assets.eka, company: 'Ekanuri Shorebase', vendor: 'Sinar Prapanca', date: 'October 2021 - June 2023', title: 'Carrying out the main duties of SATPAM :', list1: 'Enforcing regulations', list2: 'Checking the requirements of incoming vendors', list3: 'Such as: Delivery Note, Antigent Tests, Vehicle checklist, and Personal Protective Equipment', list4: 'Entering incoming vendor data', list5: 'Patrolling the dock area', list6: 'Escorting reach stackers and cranes' }
+]
+
+export const securityExperienceSayap = [
+    { icon: assets.sayap, company: 'Sayap Mas Utama', vendor: 'Delta Gada Persada', date: 'July 2023 - September 2025', title: 'Carrying out the main duties of SATPAM :', list1: 'Enforcing regulations', list2: 'Checking the requirements of incoming vendors', list3: 'Such as: Delivery Note, Vehicle checklist, and Personal Protective Equipment', list4: 'Enter vendor data into the E-Checkpoint system', list5: 'Patrol the entire area of Sayap Mas Utama 2', list6: 'Monitor incoming and outgoing two-wheeled and four-wheeled vehicles (Secure Parking)' }
 ]
 
 export const developerExperience = [

@@ -114,7 +114,7 @@ export default function Home() {
           </div>
 
           <div className='w-full left-1/2 px-5 items-center justify-between  rounded-sm'>
-            {theTruth.map(({ icon, title, description }, index) => (
+            {theTruth.map(({ icon, description }, index) => (
               <div key={index}>
                 <div className='grid md:grid-cols-2 gap-2 mb-15'>
                   <Image src={icon} className='rounded-xl w-100 max-w-100 max-h-60' alt='' />
