@@ -65,6 +65,7 @@ export default function Home() {
         <div className='fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]'>
           <Image src={assets.header_bg_color} alt='' className='w-full' />
         </div>
+
         <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-blend-exclusion bg-opacity-50 backdrop-blur-lg shadow-sm" : ""}`}>
           <a href="#home" className='text-5xl w-28 cursor-pointer mr-14'>
             Wahyu
@@ -102,7 +103,7 @@ export default function Home() {
         <div id='experiences' className='w-full px-[12%] scroll-mt-20'>
           <h2 className='text-center text-5xl font-Ovo pt-30 mb-10'>The <span>Truth</span></h2>
 
-          <div className='w-full left-1/2 px-5 items-center justify-between  rounded-sm'>
+          <div className='w-full px-5 items-center justify-between rounded-sm'>
             <div className='grid md:grid-cols-2 gap-2 mb-15'>
               <Image src={assets.introduce} className='rounded-xl w-100 max-w-100 max-h-60' alt='' />
               <div className='text-2xl rounded-xl px-5 mt-5 max-w-2xl'>
@@ -111,7 +112,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='w-full left-1/2 px-5 items-center justify-between  rounded-sm'>
+          <div className='w-full px-5 items-center justify-between rounded-sm'>
             {theTruth.map(({ icon, description }, index) => (
               <div key={index}>
                 <div className='grid md:grid-cols-2 gap-2 mb-15'>
