@@ -100,10 +100,10 @@ export default function Home() {
         </nav >
 
         {/* Truth Section */}
-        <div id='experiences' className='w-full px-[12%] scroll-mt-20'>
+        <div id='experiences' className='w-full px-[15%] scroll-mt-20'>
           <h2 className='text-center text-5xl font-Ovo pt-30 mb-10'>The <span>Truth</span></h2>
 
-          <div className='w-full px-5 items-center justify-between rounded-sm'>
+          <div className='w-full items-center justify-between rounded-sm'>
             <div className='grid md:grid-cols-2 gap-2 mb-15'>
               <Image src={assets.introduce} className='rounded-xl w-100 max-w-100 max-h-60' alt='' />
               <div className='text-2xl rounded-xl px-5 mt-5 max-w-2xl'>
@@ -112,12 +112,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='w-full px-5 items-center justify-between rounded-sm'>
+          <div className='w-full items-center justify-between rounded-sm'>
             {theTruth.map(({ icon, description }, index) => (
               <div key={index}>
                 <div className='grid md:grid-cols-2 gap-2 mb-15'>
                   <Image src={icon} className='rounded-xl w-100 max-w-100 max-h-60' alt='' />
-                  <div className='text-2xl rounded-xl px-5 mt-5 max-w-2xl'>
+                  <div className='text-2xl rounded-xl mt-5 max-w-2xl'>
                     <p>{description}</p>
                   </div>
                 </div>
