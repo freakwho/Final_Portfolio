@@ -106,7 +106,7 @@ export default function Home() {
           <div className='w-full items-center justify-center rounded-sm'>
             <div className='grid md:grid-cols-2 gap-2 mb-15'>
               <Image src={assets.introduce} className='rounded-xl w-100 max-w-100 max-h-60' alt='' />
-              <div className='text-2xl rounded-xl px-5 mt-5 max-w-2xl'>
+              <div className='text-2xl rounded-xl mt-5 max-w-2xl'>
                 <p>Let me introduce myself, my name is Wahyu, this is my portfolio, I have worked as a <Link className='text-fuchsia-800 text-decoration-line: underline; text-2xl font-semibold' href="/Security">Security</Link> guard for quite a long time, but on the other hand I am a <Link className='text-cyan-400 text-decoration-line: underline; text-2xl font-semibold' href="/Developer">Fresh Graduate</Link> of informatics engineering.</p>
               </div>
             </div>
