@@ -90,21 +90,6 @@ const page = () => {
                     <li><Link className='font-Sec' href="/">Back</Link></li>
 
                 </ul>
-
-                {/* Experience Dropdown Menu */}
-
-                {/* <ul ref={dropMenuRef} className='flex flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-purple-900 transition duration-500'>
-
-                    <div className='absolute right-6 top-6' onClick={closeMen}>
-                        <Image src={assets.close_black} alt='' className='w-5 cusor-pointer' />
-                    </div>
-
-                    <li><a className='font-Sec' onClick={closeMen} href="#pertamina">Pertamina</a></li>
-                    <li><a className='font-Sec' onClick={closeMen} href="#ekanuri">Ekanuri</a></li>
-                    <li><a className='font-Sec' onClick={closeMen} href="#sayap">Sayap Mas Utama</a></li>
-
-                </ul> */}
-
             </nav >
 
             {/* Home Section */}
@@ -124,9 +109,9 @@ const page = () => {
                 </p>
 
                 <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
-                    <a href="/CV/CV_SATPAM_English.pdf" download className='font-Sec px-10 py-3 border rounded-full border-white flex items-center gap-2'>English <Image src={assets.download_icon_dark} alt='' className='w-4' /></a>
+                    <a id='CV_Downloads' href="/CV/CV_SATPAM_English.pdf" download className='font-Sec px-10 py-3 border rounded-full border-white flex items-center gap-2'>English <Image src={assets.download_icon_dark} alt='' className='w-4' /></a>
 
-                    <a href="/CV/CV_SATPAM.pdf" download className='font-Sec px-10 py-3 border rounded-full border-white flex items-center gap-2'>
+                    <a id='CV_Downloads' href="/CV/CV_SATPAM.pdf" download className='font-Sec px-10 py-3 border rounded-full border-white flex items-center gap-2'>
                         Indonesian <Image src={assets.download_icon_dark} alt='' className='w-4' /></a>
                 </div>
             </div>
@@ -181,10 +166,10 @@ const page = () => {
             </div>
 
             {/* Experience Section */}
-            <div className='w-full px-[12%] scroll-mt-20'>
-                <h2 className='text-center text-5xl font-Sec py-5 mb-5' id='pertamina'>Experience</h2>
+            <div className='w-full px-5 scroll-mt-20'>
+                <h2 className='text-center text-5xl font-Sec py-5 mb-5'>Experience</h2>
 
-                <div className='w-full bottom-5 left-1/2 px-5 items-center justify-between  rounded-xl mb-5 font-Sec'>
+                <div className='w-full bottom-5 left-1/2 px-[12%] scroll-mt-25 items-center justify-between  rounded-xl mb-5 font-Sec' id='pertamina'>
 
                     {minaHead.map(({ company, vendor, date, icon, title, list1, list2, list3, list4, next }, index) => (
                         <div key={index}>
@@ -194,7 +179,7 @@ const page = () => {
                                 <p className='text-sm mb-8'>{date}</p>
                             </div>
 
-                            <div className='grid md:grid-cols-2 gap-2 mb-10'>
+                            <div className='grid md:grid-cols-2 gap-10 mb-10 px-[5%]'>
                                 <Image src={icon} className='rounded-xl w-100' alt='' />
                                 <div className='text-xl rounded-xl'>
                                     <p className='text-3xl font-semibold'>{title}</p>
@@ -211,7 +196,7 @@ const page = () => {
                     ))}
 
                     {minaExp.map(({ icon, title, list1, list2, list3, list4, list5 }, index) => (
-                        <div key={index} className='grid md:grid-cols-2 gap-2 mb-10'>
+                        <div key={index} className='grid md:grid-cols-2 gap-15 mb-10 px-[5%]'>
                             <Image src={icon} className='rounded-xl w-100' alt='' />
                             <div className='text-xl rounded-xl'>
                                 <p className='text-3xl font-semibold'>{title}</p>
@@ -228,15 +213,15 @@ const page = () => {
 
                 </div >
 
-                {securityExperienceEka.map(({ icon, company, vendor, date, title, list1, list2, list3, list4, list5, list6 }, index) => (
-                    <div key={index} className='w-full bottom-5 left-1/2 px-5 items-center justify-between  rounded-xl mb-5 font-Sec' id='eka'>
-                        <div>
+                <div id='eka' className='w-full bottom-5 left-1/2 px-[12%] scroll-mt-25 items-center justify-between  rounded-xl mb-5 font-Sec'>
+                    {securityExperienceEka.map(({ icon, company, vendor, date, title, list1, list2, list3, list4, list5, list6 }, index) => (
+                        <div key={index}>
                             <div className='items-center text-center mb-10 mt-20'>
                                 <h1 className='text-3xl text-shadow-black font-semibold'>{company}</h1>
                                 <span className='text-xl'>{vendor}</span>
                                 <p className='text-sm mb-10'>{date}</p>
                             </div>
-                            <div className='grid md:grid-cols-2 gap-2 mb-5'>
+                            <div className='grid md:grid-cols-2 gap-15 mb-5 px-[5%]'>
                                 <Image src={icon} className='rounded-xl w-100' alt='' />
                                 <div className='text-xl rounded-xl'>
                                     <p className='text-3xl font-semibold'>{title}</p>
@@ -251,34 +236,37 @@ const page = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
 
-                {securityExperienceSayap.map(({ icon, company, vendor, date, title, list1, list2, list3, list4, list5, list6 }, index) => (
-                    <div key={index} className='w-full bottom-5 left-1/2 px-5 items-center justify-between  rounded-xl mb-5 font-Sec' id='sayap'>
-                        <div>
-                            <div className='items-center text-center mb-10 mt-20'>
-                                <h1 className='text-3xl text-shadow-black font-semibold'>{company}</h1>
-                                <span className='text-xl'>{vendor}</span>
-                                <p className='text-sm mb-10'>{date}</p>
-                            </div>
-                            <div className='grid md:grid-cols-2 gap-2 mb-5'>
-                                <Image src={icon} className='rounded-xl w-100' alt='' />
-                                <div className='text-xl rounded-xl'>
-                                    <p className='text-3xl font-semibold'>{title}</p>
-                                    <ul className='text-lg font-semibold mt-5 max-w-lg mb-5 justify-between'>
-                                        <li>{list1}</li>
-                                        <li>{list2}</li>
-                                        <li>{list3}</li>
-                                        <li>{list4}</li>
-                                        <li>{list5}</li>
-                                        <li>{list6}</li>
-                                    </ul>
+                <div id='sayap' className='w-full bottom-5 left-1/2 px-[12%] scroll-mt-25 items-center justify-between rounded-xl mb-5 font-Sec'>
+                    {securityExperienceSayap.map(({ icon, company, vendor, date, title, list1, list2, list3, list4, list5, list6 }, index) => (
+                        <div key={index}>
+                            <div>
+                                <div className='items-center text-center mb-10 mt-20'>
+                                    <h1 className='text-3xl text-shadow-black font-semibold'>{company}</h1>
+                                    <span className='text-xl'>{vendor}</span>
+                                    <p className='text-sm mb-10'>{date}</p>
+                                </div>
+                                <div className='grid md:grid-cols-2 gap-15 mb-5 px-[5%]'>
+                                    <Image src={icon} className='rounded-xl w-100 mt-8' alt='' />
+                                    <div className='text-xl rounded-xl'>
+                                        <p className='text-3xl font-semibold'>{title}</p>
+                                        <ul className='text-lg font-semibold mt-5 max-w-lg mb-5 justify-between'>
+                                            <li>{list1}</li>
+                                            <li>{list2}</li>
+                                            <li>{list3}</li>
+                                            <li>{list4}</li>
+                                            <li>{list5}</li>
+                                            <li>{list6}</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
+
 
             </div>
 

@@ -76,6 +76,13 @@
 
 /* Website Developer Section  */
 
+/* Home Section */
+#CV_Download:hover {
+  background-color: white;
+  transform: translateY(-0.25rem);
+  box-shadow: 4px 4px 0 #000;
+}
+
 /* About Me Section */
 #AboutCard {
   border: 0.5px solid #9ca3af;
@@ -140,6 +147,15 @@
 .font-Sec {
   font-family: 'Ovo', serif;
   color: #f3f4f6;
+}
+
+
+/* Home Section */
+
+#CV_Downloads:hover {
+  background-color: #791eb6ec;
+  transform: translateY(-0.25rem);
+  box-shadow: 4px 4px 0 white;
 }
 
 /* About Me Section */

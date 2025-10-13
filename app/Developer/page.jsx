@@ -91,9 +91,9 @@ const page = () => {
                     My Resume
                 </p>
                 <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
-                    <a href="/CV/CV_IT_English.pdf" download className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2'>English <Image src={assets.download_icon} alt='' className='w-4' /></a>
+                    <a id='CV_Download' href="/CV/CV_IT_English.pdf" download className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2'>English <Image src={assets.download_icon} alt='' className='w-4' /></a>
 
-                    <a href="/CV/CV_IT.pdf" download className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2'>
+                    <a id='CV_Download' href="/CV/CV_IT.pdf" download className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2'>
                         Indonesian <Image src={assets.download_icon} alt='' className='w-4' /></a>
                 </div>
             </div>
