@@ -140,6 +140,12 @@
   justify-content: center;
 }
 
+#xp:hover {
+  background-color: white;
+  transform: translateY(-0.25rem);
+  box-shadow: 4px 4px 0 #000;
+}
+
 
 /* Security Guard Section  */
 

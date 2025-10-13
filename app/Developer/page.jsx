@@ -161,11 +161,11 @@ const page = () => {
 
                 {developerExperience.map(({ head, date, body1, body2, body3, body4 }, index) => (
                     <div key={index}>
-                        <div className='w-full bottom-5 left-1/2 py-10 px-5 items-center justify-between rounded-xl mb-10 border border-y-neutral-400 bg-gradient-to-r from-stone-95 to-transparent'>
+                        <div className='w-full bottom-5 left-1/2 py-10 px-5 items-center justify-between mb-10'>
                             <h1 className='text-3xl text-shadow-black text-left'>{head}</h1>
                             <p className='text-sm mb-8'>{date}</p>
                             <div>
-                                <div id='xp' className='grid md:grid-cols-2 gap-6 text-xl bottom-5  py-3 px-5 items-center justify-between'>
+                                <div id='xp' className='grid md:grid-cols-2 gap-6 text-xl bottom-5  py-3 px-5 items-center justify-between border border-y-neutral-400 bg-gradient-to-r from-stone-95 to-transparent rounded-xl'>
                                     <p>{body1}</p>
                                     <p>{body2}</p>
                                     <p>{body3}</p>
