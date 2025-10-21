@@ -191,7 +191,7 @@ export const developerExperience = [
 ]
 
 export const theTruth = [
-    { icon: assets.career, description: 'As you can see, I have been a security guard for a long time, but as a recent IT graduate, I wanted to change my career path to programming, or at least work in that field.' },
+    { icon: assets.career, description: 'As you can see, I have been a security guard for a long time, but as a recent IT graduate, I wanted to change my career path to information technology, or at least work in a field that combines the two.' },
     { icon: assets.chance, description: ' I knew, it might be too late for me to change my career path, as I only graduated with a computer science degree at the age of 27.' },
     { icon: assets.career_level, description: ' On the other hand, I also know that in the security guard sector there are career levels, such as Gada Pratama for entry level -> Gada Madya for leadership level, and so on.' },
     { icon: assets.realize, description: ' I was confused, because I initially took this job as a stepping stone to a bachelors degree in information technology. And then, as time went by, it had suddenly been eight years.' },

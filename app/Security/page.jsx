@@ -63,7 +63,7 @@ const page = () => {
 
                 <div className='flex items-center gap-4'>
 
-                    <Link className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-white rounded-full ml-4 font-Sec bg-black' href="/">Back</Link>
+                    <Link className='hidden lg:flex items-center gap-3 px-10 py-2.5 border-3 border-white rounded-full ml-4 font-Sec bg-black' href="/">Back</Link>
 
                     <button className='block md:hidden ml-3' onClick={openMenu}>
                         <Image src={assets.menu_black} alt='' className='w-6' />
